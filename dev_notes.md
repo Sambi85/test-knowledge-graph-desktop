@@ -1,6 +1,6 @@
 # Dev Notes:
-- created at: 2022-01-26
-- updated at: 2022-01-26
+- created at: 2022-01-21
+- updated at: 2022-01-22
 
 My approach:
 - Handling this solution in 2 methods: #scrape_artwork, #missing_data_warning
@@ -12,7 +12,7 @@ My approach:
 - Handled santizing data for the missing data warning
 - Added addtional HTML test data for better testing. (I added mondrian and monet)
 - I noticed there was a div(the carrousel), so I targeted this area of the dom.
-- The div contains all the data we need related to paintings, `name`, `extensions` array (date), Google `link` and `thumbnail`
+- The div contains all the data we need related to paintings, `name`, `extensions` array (date), Google `link` and `image`
 
 targeted this div using this identifier:
   data-attrid="kc:/visual_art/visual_artist:works
