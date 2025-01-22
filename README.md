@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Extract Van Gogh Paintings Code Challenge
 
 Goal is to extract a list of Van Gogh paintings from the attached Google search results page.
@@ -27,10 +26,9 @@ Add also to your array the painting thumbnails present in the result page file (
 Test against 2 other similar result pages to make sure it works against different layouts. (Pages that contain the same kind of carrousel. Don't necessarily have to be paintings.)
 
 The suggested time for this challenge is 4 hours. But, you can take your time and work more on it if you want.
-=======
+
 # Knowledge Graph Desktop
 
 [![Build Status](https://travis-ci.org/serpapi/test-knowledge-graph-desktop.svg?branch=master)](https://travis-ci.org/serpapi/test-knowledge-graph-desktop)
 
 Tests for SerpApi Knowledge Graph results on desktop
->>>>>>> 281f1d71bcab194a1b49fb50ee9d737cbc9777ec
