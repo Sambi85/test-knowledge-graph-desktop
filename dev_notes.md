@@ -32,6 +32,8 @@ Run solution.rb in terminal:
 # RSPEC Testing:
  Run tests in terminal:
    rspec ./spec/<ADD TEST HERE>.rb
+   or 
+   bundle exec rspec ./spec/<ADD TEST HERE>.rb
 
 - van_gogh_test_spec.rb, this is my base test suite, it also loads the van_gogh-paintings.html
 - mondrian_test_spec.rb, this set uses a different google search, loads the mondrian-paintings.html

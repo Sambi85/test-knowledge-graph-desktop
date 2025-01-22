@@ -17,9 +17,9 @@ RSpec.describe 'scrap_artwork' do
         expect(results).to be_an(Array)
         expect(results.size).to be > 0
         expect(results.first).to have_key(:name)
-        expect(results.first).to have_key(:year)
+        expect(results.first).to have_key(:extension)
         expect(results.first).to have_key(:google_link)
-        expect(results.first).to have_key(:thumbnail)
+        expect(results.first).to have_key(:image)
       end
 
       it 'does not have duplicate entries' do

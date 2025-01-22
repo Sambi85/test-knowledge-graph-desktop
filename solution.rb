@@ -5,11 +5,11 @@ FILE_PATH = '/home/sambi85/Projects/code-challenge/files/van-gogh-paintings.html
 # FILE_PATH = '/home/sambi85/Projects/code-challenge/files/mondrian-paintings.html'
 # FILE_PATH = '/home/sambi85/Projects/code-challenge/files/monet-paintings.html'
 
-def missing_data_warning(href, painting_name, year, thumbnail)
-  warn_message = "WARN: missing data for link: #{href.nil? || href.empty? ? 'missing data!' : href}\n" \
-                 "name: #{painting_name.nil? || painting_name.empty? ? 'missing data!' : painting_name}\n" \
-                 "year: #{year.nil? || year.empty? ? 'missing data!' : year}\n" \
-                 "thumbnail: #{thumbnail.nil? || thumbnail.empty? ? 'missing data!' : thumbnail}\n"
+def missing_data_warning(href, painting_name, year, image)
+  warn_message = "WARN: missing data, link: #{href.nil? || href.empty? ? 'missing data!' : href}\n" \
+                 "name: #{painting_name.nil? || painting_name.empty? ? 'missing data!' : painting_name},\n" \
+                 "year: #{year.nil? || year.empty? ? 'missing data!' : year},\n" \
+                 "image: #{image.nil? || image.empty? ? 'missing data!' : image}\n"
   warn_message
 end
 
@@ -22,17 +22,17 @@ def scrap_artwork(target_div)
       href = link['href'] || nil
       painting_name = link.at_css('div div:first-child')&.text || nil
       year = link.at_css('div div:last-child')&.text || nil
-      thumbnail = link.at_css('img')&.[]('src') || nil # &.[],  safely tries to access the 'src' attribute of the 'img' tag.
+      image = link.at_css('img')&.[]('src') || nil # &.[],  safely tries to access the 'src' attribute of the 'img' tag.
 
-      if href && painting_name && year && thumbnail
+      if href && painting_name && year && image
         results << {
           name: painting_name.strip,
-          year: year.strip,
+          extension: [year.strip],
           google_link: "https://www.google.com#{href}",
-          thumbnail: thumbnail
+          image: image
         }
       else
-        print missing_data_warning(href, painting_name, year, thumbnail)
+        print missing_data_warning(href, painting_name, year, image)
       end
     end
   rescue StandardError => e
