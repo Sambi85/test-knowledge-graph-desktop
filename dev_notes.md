@@ -23,10 +23,10 @@ Run solution.rb in terminal:
 - *** Make sure you run solution.rb at root of the project
 - *** You need to manually update the file path in the global variable
 
-# How this works?
+# How does this works?
 - Add a file path to the global variable, the file should have the html of the google search results page
 - The #scrap_artwork is the meat and potatoes, it scrapes the data from the page, and returns an array of hashes
-- #scrap_artwork won't add incomplete data and will skip an entry(preserving data integrity), we need to find all 4 (painting_name, year, google_link, thumbnail)
+- #scrap_artwork won't add incomplete data and will skip an entry(preserving data integrity), we need to find all 4 (painting_name, year, google_link, image)
 - #scrap_artwork concats the google_link, which makes it easier to open in a browser
 
 # RSPEC Testing:
